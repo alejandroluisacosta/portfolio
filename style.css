@@ -178,6 +178,10 @@ hr {
     fill: #395181;
 }
 
+.spanish-cv {
+    display: none;
+}
+
 .portfolio {
     opacity: 0;
     text-align: center;

@@ -63,7 +63,7 @@
             <div class="icons-container">
                 <a href="https://github.com/alejandroluisacosta" target="_blank"><img class="icon" src="./assets/github.svg"/></a>
                 <a href="https://www.linkedin.com/in/alejandroluisacosta" target="_blank"><img class="icon" src="./assets/linkedin.svg"/></a>
-                <a href="./assets/CV_Alejandro_Acosta_Espanol.pdf" target="_blank"><img class="icon" src="./assets/cv.svg"/></a>
+                <a href="./assets/Resume_Alejandro_Acosta.pdf" id="cv" target="_blank"><img class="icon" src="./assets/cv.svg"/></a>
             </div>
         </div>
         <hr class="line--2">
@@ -219,18 +219,22 @@
         document.addEventListener('DOMContentLoaded', function() {
             const englishText = document.querySelectorAll('.english-text');
             const spanishText = document.querySelectorAll('.spanish-text');
-            
+            const cv = document.getElementById('cv');
+    
             document.getElementById('english').addEventListener('click', function() {
                 spanishText.forEach(el => el.classList.add('hidden-text'));
                 englishText.forEach(el => el.classList.remove('hidden-text'));
+                cv.href = './assets/Resume_Alejandro_Acosta.pdf';
             });
-        
+    
             document.getElementById('spanish').addEventListener('click', function() {
                 englishText.forEach(el => el.classList.add('hidden-text'));
                 spanishText.forEach(el => el.classList.remove('hidden-text'));
+                cv.href = './assets/CV_Alejandro_Acosta.pdf';
             });
         });
-        </script>
+    </script>
+    
     <script>
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
