@@ -18,10 +18,6 @@ a {
     color: unset;
 }
 
-button {
-    cursor: pointer;
-}
-
 .english-text, .spanish-text {
     transition: opacity 1s ease, max-height 0.5s ease;
     overflow: hidden;
@@ -284,8 +280,9 @@ video {
 }
 
 button {
+    cursor: pointer;
     border-radius: 32px;
-    padding: 12px 30px;
+    padding: 5px 30px;
     border: 0;
     background-color: white;
     color: #395181;
