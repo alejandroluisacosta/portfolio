@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alejandro Luis Acosta</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script>
+        window.addEventListener('scroll', function() {
+            const portfolio = document.querySelector('.portfolio');
+            if (window.scrollY > 0) {
+                portfolio.style.opacity = '1';
+                portfolio.style.transition = 'opacity 3.5s';
+            } else {
+                portfolio.style.opacity = '0';
+            }
+        });
+    </script>
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const line1 = document.querySelector('.line--1');
+        const line2 = document.querySelector('.line--2');
+        
+        line1.style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
+        line2.style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
+    
+        if (scrollY > 0) {
+            line1.classList.add('hidden-hr');
+            line2.classList.add('hidden-hr');
+        } else {
+            line1.classList.remove('hidden-hr');
+            line2.classList.remove('hidden-hr');
+        }
+    });
+    </script>
+</head>
+<body>
+    <div class="above-the-fold-container">
+        <hr class="line--1">
+        <div class="welcome-container">
+            <h1 class="welcome">Welcome</h1>
+            <div class="languages">
+                <img class="flag button" id="english" src="./assets/usa.png" alt="U.S.A flag">
+                <img class="flag" id="spanish" src="./assets/spain.png" alt="Spain flag">
+            </div>
+            <p class="personal-description english-text">I’m Alejandro Acosta, a junior full-stack developer based in Madrid, Spain. I’m currently working on large-scale projects in the hotel sector, and pride myself on being a resolutive, curious, and proactive professional constantly looking to improve both my hard and soft skills.</p>
+            <p class="personal-description spanish-text hidden-text">Soy Alejandro Acosta, desarrollador full-stack junior ubicado en Madrid, España. Actualmente trabajo en proyectos de gran envergadura en el sector hotelero, y me enorgullezco de ser un profesional resolutivo, curioso y proactivo que busca constantemente mejorar tanto mis habilidades técnicas como interpersonales.</p>
+            <a href="#portfolio"><div class="go-to-portfolio-container">
+                <p class="go-to-portfolio">Portfolio</p>
+                <span class="arrow material-symbols-outlined">
+                    arrow_right_alt
+                </span>
+            </div></a>
+        </div>
+        <div class="person-container">
+            <div class="personal-image" style="background-image: url('./assets/alejandro.jpeg');"></div>
+            <div class="icons-container">
+                <a href="https://github.com/alejandroluisacosta" target="_blank"><img class="icon" src="./assets/github.svg"/></a>
+                <a href="https://www.linkedin.com/in/alejandroluisacosta" target="_blank"><img class="icon" src="./assets/linkedin.svg"/></a>
+                <a href="./assets/CV_Alejandro_Acosta_Espanol.pdf" target="_blank"><img class="icon" src="./assets/cv.svg"/></a>
+            </div>
+        </div>
+        <hr class="line--2">
+    </div>
+    <div class="portfolio" id="portfolio">
+        <h2 class="projects-title english-text">Projects</h2>
+        <h2 class="projects-title spanish-text hidden-text">Proyectos</h2>
+        <div class="projects-container">
+            <div class="project">
+                <div class="tech-container tech-container--left">
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/html.svg"/>
+                        <p class="tech-name">HTML</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/css.svg"/>
+                        <p class="tech-name">CSS</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/sass.svg"/>
+                        <p class="tech-name">SASS</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/javascript.svg"/>
+                        <p class="tech-name">JavaScript</p>
+                    </div>
+                </div>
+                <video autoplay muted loop>
+                    <source src="./assets/hotel-miranda-video.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text-container">
+                    <h3 class="project-name">Hotel Miranda</h3>
+                    <p class="project-description english-text">Responsive website for the luxurious Miranda Hotel, with a high focus on detail and a smooth user experience.</p>
+                    <p class="project-description spanish-text hidden-text">Sitio web responsive para el lujoso Hotel Miranda, con gran enfoque en los detalles visuales y una fluida experiencia de usuario.</p>
+                    <div class="buttons-container">
+                        <a href="https://bit.ly/3MgldTL" target="_blank"><button>Deploy</button></a>
+                        <a href="https://github.com/alejandroluisacosta/miranda-hotel" target="_blank"><button>Code</button></a>
+                </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="tech-container tech-container--right">
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/typescript.svg"/>
+                        <p class="tech-name">TypeScript</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/react.svg"/>
+                        <p class="tech-name">React</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/node.svg"/>
+                        <p class="tech-name">Node.js</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/express.svg"/>
+                        <p class="tech-name">Express</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/mongo.svg"/>
+                        <p class="tech-name">MongoDB</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/sql.svg"/>
+                        <p class="tech-name">SQL</p>
+                    </div>
+                </div>
+                <video autoplay muted loop>
+                    <source src="./assets/miranda-dashboard-video.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text-container">
+                    <h3 class="project-name">Miranda Dashboard</h3>
+                    <p class="project-description english-text">A management application for hotel employees to handle bookings, rooms and users. Front-end, back-end and database included.</p>
+                    <p class="project-description spanish-text hidden-text">Aplicación de gestión para empleados de hotel para manejar reservas, habitaciones y usuarios. Incluye front-end, back-end y base de datos.</p>
+                    <div class="buttons-container">
+                        <a href="https://bit.ly/3X6Hfi4" target="_blank"><button>Deploy</button></a>
+                        <a href="https://github.com/alejandroluisacosta/dashboard-miranda-backend" target="_blank"><button>Code</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <video autoplay muted loop>
+                    <source src="./assets/imagenation-video.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text-container">
+                    <div class="tech-container tech-container--left">
+                        <div class="tech-icon-container">
+                            <img class="tech-icon" src="assets/html.svg"/>
+                            <p class="tech-name">HTML</p>
+                        </div>
+                        <div class="tech-icon-container">
+                            <img class="tech-icon" src="assets/css.svg"/>
+                            <p class="tech-name">CSS</p>
+                        </div>
+                        <div class="tech-icon-container">
+                            <img class="tech-icon" src="assets/javascript.svg"/>
+                            <p class="tech-name">JavaScript</p>
+                        </div>
+                        <div class="tech-icon-container">
+                            <img class="tech-icon" src="assets/react.svg"/>
+                            <p class="tech-name">React</p>
+                        </div>
+                        <div class="tech-icon-container">
+                            <img class="tech-icon" src="assets/redux.svg"/>
+                            <p class="tech-name">Redux</p>
+                        </div>
+                    </div>
+                    <h3 class="project-name">ImageNation</h3>
+                    <p class="project-description english-text">A stock photo React/Redux application with an API integration and a clean, minimalist interface for the user to enjoy.</p>
+                    <p class="project-description spanish-text hidden-text">Una aplicación de fotos de stock en React/Redux con integración de API y una interfaz limpia y minimalista.</p>
+                    <div class="buttons-container">
+                        <a href="https://bit.ly/3M6xFFT" target="_blank"><button>Deploy</button></a>
+                        <a href="https://github.com/alejandroluisacosta/image-nation" target="_blank"><button>Code</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="tech-container tech-container--right">
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/html.svg"/>
+                        <p class="tech-name">HTML</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/css.svg"/>
+                        <p class="tech-name">CSS</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/javascript.svg"/>
+                        <p class="tech-name">JavaScript</p>
+                    </div>
+                </div>
+                <video autoplay muted loop>
+                    <source src="./assets/oxygen-shop-video.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text-container">
+                    <h3 class="project-name">Oxygen Shop</h3>
+                    <p class="project-description english-text">An e-commerce landing page with several dynamic, eye-catching functionalities and an API integration for price conversion.</p>
+                    <p class="project-description spanish-text hidden-text">Una landing page con diversas funcionalidades dinámicas y llamativas, además de una integración de API para la conversión de precios.</p>
+                    <div class="buttons-container">
+                        <a href="https://bit.ly/3vBY1uE" target="_blank"><button>Deploy</button></a>
+                        <a href="https://github.com/alejandroluisacosta/oxygen-shop" target="_blank"><button>Code</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="contact-information">Alejandro Luis Acosta - alejandroluisacosta95@gmail.com</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const englishText = document.querySelectorAll('.english-text');
+            const spanishText = document.querySelectorAll('.spanish-text');
+            
+            document.getElementById('english').addEventListener('click', function() {
+                spanishText.forEach(el => el.classList.add('hidden-text'));
+                englishText.forEach(el => el.classList.remove('hidden-text'));
+            });
+        
+            document.getElementById('spanish').addEventListener('click', function() {
+                englishText.forEach(el => el.classList.add('hidden-text'));
+                spanishText.forEach(el => el.classList.remove('hidden-text'));
+            });
+        });
+        </script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const viewportHeight = window.innerHeight;
+        
+            document.querySelector('.welcome-container').style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
+            document.querySelector('.person-container').style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
+        });
+        </script>
+</body>
+</html>
