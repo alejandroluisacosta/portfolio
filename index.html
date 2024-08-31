@@ -152,35 +152,35 @@
                 </div>
             </div>
             <div class="project">
-                <div class="text-container">
-                    <div class="tech-container tech-container--left">
-                        <div class="tech-icon-container">
-                            <img class="tech-icon" src="assets/html.svg"/>
-                            <p class="tech-name">HTML</p>
-                        </div>
-                        <div class="tech-icon-container">
-                            <img class="tech-icon" src="assets/css.svg"/>
-                            <p class="tech-name">CSS</p>
-                        </div>
-                        <div class="tech-icon-container">
-                            <img class="tech-icon" src="assets/javascript.svg"/>
-                            <p class="tech-name">JavaScript</p>
-                        </div>
-                        <div class="tech-icon-container">
-                            <img class="tech-icon" src="assets/react.svg"/>
-                            <p class="tech-name">React</p>
-                        </div>
-                        <div class="tech-icon-container">
-                            <img class="tech-icon" src="assets/redux.svg"/>
-                            <p class="tech-name">Redux</p>
-                        </div>
+                <div class="tech-container tech-container--left">
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/html.svg"/>
+                        <p class="tech-name">HTML</p>
                     </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/css.svg"/>
+                        <p class="tech-name">CSS</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/javascript.svg"/>
+                        <p class="tech-name">JavaScript</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/react.svg"/>
+                        <p class="tech-name">React</p>
+                    </div>
+                    <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/redux.svg"/>
+                        <p class="tech-name">Redux</p>
+                    </div>
+                </div>
                     <a href="https://bit.ly/3M6xFFT" target="_blank">
                         <video autoplay muted loop>
                             <source src="./assets/imagenation-video.mov" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </a>
+                <div class="text-container">
                     <h3 class="project-name">ImageNation</h3>
                     <p class="project-description english-text">A stock photo React/Redux application with an API integration and a clean, minimalist interface for the user to enjoy.</p>
                     <p class="project-description spanish-text hidden-text">Una aplicación de fotos de stock en React/Redux con integración de API y una interfaz limpia y minimalista.</p>
@@ -252,6 +252,20 @@
             document.querySelector('.welcome-container').style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
             document.querySelector('.person-container').style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
         });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(function() {
+                    document.querySelector('.welcome').classList.add('visible');
+                }, 0);
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(function() {
+                    document.querySelector('.go-to-portfolio-container').style.animationPlayState = 'running';
+                }, 3000);
+            });
         </script>
 </body>
 </html>

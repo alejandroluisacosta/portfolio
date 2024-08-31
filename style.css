@@ -29,14 +29,14 @@ a {
     margin: 0 !important;
 }
 
-.above-the-fold-container {
+    .above-the-fold-container {
     position: relative;
     display: flex;
     gap: 30%;
-    padding: 10% 15%;
+    padding: 10% 15% 10% 15%;
     justify-content: center;
     margin-bottom: 55px;
-}
+    }
 
 hr {
     position: absolute;
@@ -83,6 +83,12 @@ hr {
     margin-left: -15px;
     font-weight: 300;
     transform: translateX(0%);
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.welcome.visible {
+    opacity: 1;
 }
 
 .languages {
@@ -104,7 +110,7 @@ hr {
 }
 
 .person-container {
-    transform: translateX(0%);
+    transform: translateX(-55%);
 }
 
 .personal-description {
@@ -117,7 +123,19 @@ hr {
     display: flex;
     align-items: center;
     gap: 10px;
+    opacity: 0;
+    animation: pulsar 1s ease 1s forwards;
 }
+
+@keyframes pulsar {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+} */
 
 .go-to-portfolio-container:hover .arrow {
     opacity: 1;
@@ -271,6 +289,9 @@ video {
 
 .project-description {
     margin-bottom: 32px;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttons-container {
