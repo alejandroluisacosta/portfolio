@@ -45,7 +45,7 @@
     <div class="above-the-fold-container">
         <hr class="line--1">
         <div class="welcome-container">
-            <h1 class="welcome">Welcome</h1>
+            <h1 class="welcome"><span class="reveal">Welcome</span></h1>
             <div class="languages">
                 <img class="flag button" id="english" src="./assets/usa.png" alt="U.S.A flag">
                 <img class="flag" id="spanish" src="./assets/spain.png" alt="Spain flag">
@@ -258,13 +258,6 @@
                 setTimeout(function() {
                     document.querySelector('.welcome').classList.add('visible');
                 }, 0);
-            });
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                setTimeout(function() {
-                    document.querySelector('.go-to-portfolio-container').style.animationPlayState = 'running';
-                }, 3000);
             });
         </script>
 </body>
