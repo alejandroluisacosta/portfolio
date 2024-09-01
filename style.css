@@ -160,6 +160,10 @@ hr {
     margin-bottom: 0;
 }
 
+.arrow {
+    animation: pulsar 1s ease 2.7s forwards;
+}
+
 .go-to-portfolio:hover {
     border-color: #395181;
     text-decoration: underline;
@@ -183,6 +187,8 @@ hr {
     border-radius: 50%;
     margin-bottom: 50px;
     border: 4px solid #395181;
+    animation: pulsar 1s ease 10ms forwards;
+    opacity: 0;
 }
 
 .icons-container {
