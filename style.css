@@ -18,6 +18,18 @@ a {
     color: unset;
 }
 
+.email {
+    text-decoration: underline;
+}
+
+.flag {
+    cursor: pointer;
+}
+
+.flag--selected {
+    border-bottom: 2px solid #395181;
+}
+
 .english-text, .spanish-text {
     transition: opacity 1s ease, max-height 0.5s ease;
     overflow: hidden;
@@ -209,7 +221,7 @@ hr {
 .portfolio {
     opacity: 0;
     text-align: center;
-    background: linear-gradient(to right, #395181, black);
+    background: linear-gradient(to right, #395181, #0e1d3b);
     padding-top: 45px;
     padding-bottom: 30px;
 }
@@ -224,7 +236,7 @@ hr {
 
 .projects-title {
     font-size: 90px;
-    font-weight: 500;
+    font-weight: 400;
     background: linear-gradient(to right, #395181, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -292,7 +304,7 @@ video {
 }
 
 .project-name {
-    font-size: 38px;
+    font-size: 30px;
     margin-bottom: 32px;
     font-weight: 400;
 }
@@ -330,8 +342,15 @@ button:hover {
     color: white;
 }
 
+.material-symbols-outlined {
+    line-height: unset !important;
+}
+
 @media only screen and (min-width: 1920px) {
     .above-the-fold-container {
         padding: 10% 25%;
+    }
+    .person-container {
+        transform: unset;
     }
 }

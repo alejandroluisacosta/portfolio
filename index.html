@@ -47,7 +47,7 @@
         <div class="welcome-container">
             <h1 class="welcome"><span class="reveal">Welcome</span></h1>
             <div class="languages">
-                <img class="flag button" id="english" src="./assets/usa.png" alt="U.S.A flag">
+                <img class="flag flag--selected button" id="english" src="./assets/usa.png" alt="U.S.A flag">
                 <img class="flag" id="spanish" src="./assets/spain.png" alt="Spain flag">
             </div>
             <p class="personal-description english-text">I’m Alejandro Acosta, a junior full-stack developer based in Madrid, Spain. I’m currently working on large-scale projects in the hotel sector, and pride myself on being a resolutive, curious, and proactive professional constantly looking to improve both my hard and soft skills.</p>
@@ -55,12 +55,12 @@
             <a href="#portfolio"><div class="go-to-portfolio-container">
                 <p class="go-to-portfolio">Portfolio</p>
                 <span class="arrow material-symbols-outlined">
-                    arrow_right_alt
+                    arrow_downward
                 </span>
             </div></a>
         </div>
         <div class="person-container">
-            <div class="personal-image" style="background-image: url('./assets/alejandro.jpeg');"></div>
+            <div class="personal-image" style="background-image: url('./assets/alejandro.webp');"></div>
             <div class="icons-container">
                 <a href="https://github.com/alejandroluisacosta" target="_blank"><img class="icon" src="./assets/github.svg"/></a>
                 <a href="https://www.linkedin.com/in/alejandroluisacosta" target="_blank"><img class="icon" src="./assets/linkedin.svg"/></a>
@@ -94,7 +94,7 @@
                 </div>
                 <a href="https://bit.ly/3MgldTL" target="_blank">
                     <video autoplay muted loop loading="lazy">
-                        <source src="./assets/hotel-miranda-video.mov" type="video/mp4">
+                        <source src="./assets/hotel-miranda-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </a>
@@ -137,7 +137,7 @@
                 </div>
                 <a href="https://bit.ly/3X6Hfi4" target="_blank">
                     <video autoplay muted loop>
-                        <source src="./assets/miranda-dashboard-video.mov" type="video/mp4">
+                        <source src="./assets/miranda-dashboard-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </a>
@@ -176,7 +176,7 @@
                 </div>
                     <a href="https://bit.ly/3M6xFFT" target="_blank">
                         <video autoplay muted loop>
-                            <source src="./assets/imagenation-video.mov" type="video/mp4">
+                            <source src="./assets/imagenation-video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </a>
@@ -207,7 +207,7 @@
                 </div>
                 <a href="https://bit.ly/3vBY1uE" target="_blank">
                     <video autoplay muted loop>
-                        <source src="./assets/oxygen-shop-video.mov" type="video/mp4">
+                        <source src="./assets/oxygen-shop-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </a>
@@ -222,24 +222,33 @@
                 </div>
             </div>
         </div>
-        <p class="contact-information">Alejandro Luis Acosta - alejandroluisacosta95@gmail.com</p>
+        <p class="contact-information">Alejandro Luis Acosta - 
+            <a class="email" href="mailto:alejandroluisacosta95@gmail.com">alejandroluisacosta95@gmail.com</a>
+        </p>
+        
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const englishText = document.querySelectorAll('.english-text');
             const spanishText = document.querySelectorAll('.spanish-text');
+            const englishFlag = document.getElementById('english');
+            const spanishFlag = document.getElementById('spanish');
             const cv = document.getElementById('cv');
-    
-            document.getElementById('english').addEventListener('click', function() {
+
+            englishFlag.addEventListener('click', function() {
                 spanishText.forEach(el => el.classList.add('hidden-text'));
                 englishText.forEach(el => el.classList.remove('hidden-text'));
                 cv.href = './assets/Resume_Alejandro_Acosta.pdf';
+                englishFlag.classList.toggle('flag--selected', true);
+                spanishFlag.classList.toggle('flag--selected', false);
             });
-    
-            document.getElementById('spanish').addEventListener('click', function() {
+
+            spanishFlag.addEventListener('click', function() {
                 englishText.forEach(el => el.classList.add('hidden-text'));
                 spanishText.forEach(el => el.classList.remove('hidden-text'));
                 cv.href = './assets/CV_Alejandro_Acosta.pdf';
+                spanishFlag.classList.toggle('flag--selected', true);
+                englishFlag.classList.toggle('flag--selected', false);
             });
         });
     </script>
