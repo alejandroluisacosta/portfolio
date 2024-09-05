@@ -41,14 +41,14 @@ a {
     margin: 0 !important;
 }
 
-    .above-the-fold-container {
+.above-the-fold-container {
     position: relative;
     display: flex;
     gap: 30%;
     padding: 10% 15% 10% 15%;
     justify-content: center;
     margin-bottom: 55px;
-    }
+}
 
 hr {
     position: absolute;
@@ -219,7 +219,7 @@ hr {
 }
 
 .portfolio {
-    opacity: 0;
+    opacity: 0.05;
     text-align: center;
     background: linear-gradient(to right, #395181, #0e1d3b);
     padding-top: 45px;
@@ -347,10 +347,60 @@ button:hover {
 }
 
 @media only screen and (min-width: 1920px) {
+    body {
+        min-width: 1440px;
+        padding-top: 5%;
+    }
     .above-the-fold-container {
-        padding: 10% 25%;
+        padding: 10% 20%;
+        margin-bottom: 7%;
     }
     .person-container {
         transform: unset;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        min-width: unset;
+    }
+
+    hr {
+        width: 35%;
+    }
+
+    .line--2 {
+        bottom: -2%;
+    }
+
+    .above-the-fold-container {
+        display: block;
+        padding: 25% 10%;
+    }
+
+    .welcome-container {
+        margin-bottom: 60px;
+    }
+
+    .welcome {
+        font-size: 60px;
+        margin-left: -5px;
+    }
+
+    .person-container {
+        transform: unset;
+    }
+
+    .icons-container {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .projects-container {
+        display: block;
+    }
+
+    .project {
+        margin-bottom: 60px;
     }
 }
