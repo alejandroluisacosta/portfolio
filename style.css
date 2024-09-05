@@ -1,6 +1,7 @@
 html {
     font-family: Montserrat;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -398,6 +399,11 @@ button:hover {
 
     .projects-container {
         display: block;
+    }
+
+    .projects-title {
+        font-size: 50px;
+        margin-bottom: 80px;
     }
 
     .project {

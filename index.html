@@ -252,11 +252,10 @@
             });
         });
     </script>
-    
     <script>
+        const viewportHeight = window.innerHeight;
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            const viewportHeight = window.innerHeight;
         
             document.querySelector('.welcome-container').style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
             document.querySelector('.person-container').style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
