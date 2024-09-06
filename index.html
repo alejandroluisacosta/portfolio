@@ -21,7 +21,7 @@
             }
         });
     </script>
-<script>
+    <script>
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
@@ -31,7 +31,7 @@
         line1.style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
         line2.style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
     
-        if (scrollY > 0) {
+        if (scrollY > 0 && window.innerWidth > 1000) {
             line1.classList.add('hidden-hr');
             line2.classList.add('hidden-hr');
         } else {
@@ -92,8 +92,8 @@
                         <p class="tech-name">JavaScript</p>
                     </div>
                 </div>
-                <a href="https://bit.ly/3MgldTL" target="_blank">
-                    <video autoplay muted loop loading="lazy">
+                <a href="https://bit.ly/4cVvfEZ" target="_blank">
+                    <video autoplay muted playsinline loop loading="lazy">
                         <source src="./assets/hotel-miranda-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -103,7 +103,7 @@
                     <p class="project-description english-text">Responsive website for the luxurious Miranda Hotel, with a high focus on detail and a smooth user experience.</p>
                     <p class="project-description spanish-text hidden-text">Sitio web responsive para el lujoso Hotel Miranda, con gran enfoque en los detalles visuales y una fluida experiencia de usuario.</p>
                     <div class="buttons-container">
-                        <a href="https://bit.ly/3MgldTL" target="_blank"><button><span class="material-symbols-outlined">visibility</span></button></a>
+                        <a href="https://bit.ly/4cVvfEZ" target="_blank"><button><span class="material-symbols-outlined">visibility</span></button></a>
                         <a href="https://github.com/alejandroluisacosta/miranda-hotel" target="_blank"><button><span class="material-symbols-outlined">code</span></button></a>
                 </div>
                 </div>
@@ -119,6 +119,10 @@
                         <p class="tech-name">React</p>
                     </div>
                     <div class="tech-icon-container">
+                        <img class="tech-icon" src="assets/redux.svg"/>
+                        <p class="tech-name">Redux</p>
+                    </div>
+                    <div class="tech-icon-container">
                         <img class="tech-icon" src="assets/node.svg"/>
                         <p class="tech-name">Node.js</p>
                     </div>
@@ -130,13 +134,13 @@
                         <img class="tech-icon" src="assets/mongo.svg"/>
                         <p class="tech-name">MongoDB</p>
                     </div>
-                    <div class="tech-icon-container">
+                    <div class="tech-icon-container tech-icon-container--sql">
                         <img class="tech-icon" src="assets/sql.svg"/>
                         <p class="tech-name">SQL</p>
                     </div>
                 </div>
-                <a href="https://bit.ly/3X6Hfi4" target="_blank">
-                    <video autoplay muted loop>
+                <a href="https://bit.ly/3Z8oHj4" target="_blank">
+                    <video autoplay playsinline muted loop>
                         <source src="./assets/miranda-dashboard-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -146,7 +150,7 @@
                     <p class="project-description english-text">A management application for hotel employees to handle bookings, rooms and users. Front-end, back-end and database included.</p>
                     <p class="project-description spanish-text hidden-text">Aplicación de gestión para empleados de hotel para manejar reservas, habitaciones y usuarios. Incluye front-end, back-end y base de datos.</p>
                     <div class="buttons-container">
-                        <a href="https://bit.ly/3X6Hfi4" target="_blank"><button><span class="material-symbols-outlined">visibility</span></button></a>
+                        <a href="https://bit.ly/3Z8oHj4" target="_blank"><button><span class="material-symbols-outlined">visibility</span></button></a>
                         <a href="https://github.com/alejandroluisacosta/dashboard-miranda" target="_blank"><button><span class="material-symbols-outlined">code</span></button></a>
                     </div>
                 </div>
@@ -175,7 +179,7 @@
                     </div>
                 </div>
                     <a href="https://bit.ly/3M6xFFT" target="_blank">
-                        <video autoplay muted loop>
+                        <video autoplay playsinline muted loop>
                             <source src="./assets/imagenation-video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -206,7 +210,7 @@
                     </div>
                 </div>
                 <a href="https://bit.ly/3vBY1uE" target="_blank">
-                    <video autoplay muted loop>
+                    <video autoplay playsinline muted loop>
                         <source src="./assets/oxygen-shop-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -252,15 +256,23 @@
             });
         });
     </script>
-    <script>
-        const viewportHeight = window.innerHeight;
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-        
-            document.querySelector('.welcome-container').style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
-            document.querySelector('.person-container').style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
-        });
-    </script>
+<script>
+    const viewportHeight = window.innerHeight;
+
+    window.addEventListener('scroll', () => {
+        const welcome = document.querySelector('.welcome-container');
+        const person = document.querySelector('.person-container');
+        const scrollY = window.scrollY;
+
+        if (window.innerWidth > 1000) {
+            welcome.style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
+            person.style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
+        } else {
+            welcome.style.opacity = Math.max(1 - scrollY / 175, 0.1);
+        }
+    });
+</script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {

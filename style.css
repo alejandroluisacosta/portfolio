@@ -289,6 +289,10 @@ hr {
     width: 50px;
 }
 
+.tech-icon-container--sql {
+    display: none;
+}
+
 .tech-name {
     font-size: 12px;
 }
@@ -370,13 +374,17 @@ button:hover {
         width: 35%;
     }
 
+    .line--1 {
+        top: 1%;
+    }
+
     .line--2 {
         bottom: -2%;
     }
 
     .above-the-fold-container {
         display: block;
-        padding: 25% 10%;
+        padding: 10% 10%;
     }
 
     .welcome-container {
@@ -406,7 +414,45 @@ button:hover {
         margin-bottom: 80px;
     }
 
+    .projects-container {
+        padding: 0 10% 15%;
+    }
+
     .project {
-        margin-bottom: 60px;
+        margin-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-name, .project-description {
+        margin-bottom: 20px;
+    }
+
+    .project:hover {
+        background-color: unset;
+    }
+
+    .tech-container {
+        flex-wrap: wrap;
+        position: unset;
+        flex-direction: row;
+        opacity: 1;
+        transition: unset;
+        gap: 7.5%;
+        justify-content: center;
+        margin-bottom: 5px;
+        padding-top: unset;
+    }
+
+    .tech-icon {
+        width: 35px;
+    }
+
+    .tech-icon-container--sql {
+        display: block;
+    }
+
+    .buttons-container {
+        gap: 15%;
     }
 }
