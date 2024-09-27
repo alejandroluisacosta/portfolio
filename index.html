@@ -256,23 +256,22 @@
             });
         });
     </script>
-<script>
-    const viewportHeight = window.innerHeight;
+    <script>
+        const viewportHeight = window.innerHeight;
 
-    window.addEventListener('scroll', () => {
-        const welcome = document.querySelector('.welcome-container');
-        const person = document.querySelector('.person-container');
-        const scrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const welcome = document.querySelector('.welcome-container');
+            const person = document.querySelector('.person-container');
+            const scrollY = window.scrollY;
 
-        if (window.innerWidth > 1000) {
-            welcome.style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
-            person.style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
-        } else {
-            welcome.style.opacity = Math.max(1 - scrollY / 175, 0.1);
-        }
-    });
-</script>
-
+            // if (window.innerWidth > 1000) {
+                welcome.style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
+                person.style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
+            // } else {
+            //     welcome.style.opacity = Math.max(1 - scrollY / 175, 0.1);
+            // }
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
