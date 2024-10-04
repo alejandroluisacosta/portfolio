@@ -264,12 +264,8 @@
             const person = document.querySelector('.person-container');
             const scrollY = window.scrollY;
 
-            // if (window.innerWidth > 1000) {
                 welcome.style.transform = `translateX(-${Math.min(scrollY, viewportHeight)}px)`;
                 person.style.transform = `translateX(${Math.min(scrollY, viewportHeight)}px)`;
-            // } else {
-            //     welcome.style.opacity = Math.max(1 - scrollY / 175, 0.1);
-            // }
         });
     </script>
     <script>
