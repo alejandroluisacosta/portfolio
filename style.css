@@ -398,11 +398,18 @@ button:hover {
 
     .person-container {
         transform: unset;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .personal-image {
+        margin-bottom: 0;
     }
 
     .icons-container {
         margin-left: 50%;
         transform: translate(-50%, 0);
+        margin-bottom: 50px;
     }
 
     .projects-container {
