@@ -172,6 +172,7 @@ hr {
     border-bottom: 1px solid transparent;
     margin-bottom: 0;
 }
+
 .arrow {
     animation: pulsar 1s ease 2.7s forwards;
 }
