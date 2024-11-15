@@ -87,12 +87,12 @@ hr {
 
 .welcome {
     font-family: Montserrat;
-    font-size: 105px;
+    font-size: 60px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 0;
-    margin-bottom: 5px;
-    margin-left: -15px;
+    margin-bottom: 16px;
+    margin-left: -4px;
     font-weight: 300;
     transform: translateX(0%);
     opacity: 0;
@@ -117,6 +117,10 @@ hr {
     to {background-size: 100% 100%} /* we animate to 100% 100%*/
   }
 
+.subtitle {
+    font-weight: 400;
+}
+
 .languages {
     display: flex;
     align-items: flex-start;
@@ -137,6 +141,7 @@ hr {
 
 .person-container {
     transform: translateX(-55%);
+    margin-top: 30px;
 }
 
 .personal-description {
@@ -392,7 +397,7 @@ button:hover {
     }
 
     .welcome {
-        font-size: 60px;
+        font-size: 48px;
         margin-left: -5px;
     }
 
